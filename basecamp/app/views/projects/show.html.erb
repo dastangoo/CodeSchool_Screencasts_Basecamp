@@ -1,0 +1,10 @@
+<h1><%= @project.title %></h1>
+
+<ul class="messages">
+  <h3>Message</h3>
+  <%= render @project.messages %>
+</ul>
+
+<p>
+  <%= render 'messages/form', project: @project %>
+</p>

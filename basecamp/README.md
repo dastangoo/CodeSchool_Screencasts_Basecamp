@@ -1,24 +1,16 @@
-# README
+# Basecamp Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app aims to replicate some of the features from Basecamp.
 
-Things you may want to cover:
+![](https://raw.githubusercontent.com/codeschool/FeatureFocus/basecamp/docs/basecamp.png)
 
-* Ruby version
+* Timeline / Progress
+* Infinite Scrolling
+* Search
+* Email Notifications
 
-* System dependencies
+## Setup
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* run `bundle`
+* run `rake db:setup`
+    * This will also load seed data under **db/seeds.rb**

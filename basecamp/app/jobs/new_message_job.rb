@@ -1,16 +1,17 @@
-require 'notification_mailer'
+require 'notifications_mailer'
 
-# New Message Job
 class NewMessageJob
   include SuckerPunch::Job
-  
-  # Class Method
+
   def self.async_perform_each(message)
     emails = message.subscribers.map(&:email)
     emails.each do |email|
-      new.async.perform(message, email).deliver
+      new.async.perform(message, email)
     end
   end
+
   def perform(message, email)
+    NotificationsMailer.new_message(message, email).deliver
   end
+
 end

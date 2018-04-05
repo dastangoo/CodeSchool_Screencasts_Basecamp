@@ -1,0 +1,16 @@
+<article>
+  <h2><%= link_to project.title, project %></h2>
+
+  <div class="last-updated">
+    Last updated <%= time_ago_in_words project.updated_at %> ago
+  </div>
+
+  <div class="accesses">
+    <% project.users.each do |user| %>
+      <div class="avatar">
+        <span class="content"> <%= user.initials %> </span>
+      </div>
+    <% end %>
+  </div>
+
+</article>

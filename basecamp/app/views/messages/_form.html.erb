@@ -1,10 +1,12 @@
-<%= from_for([@project, Message.new]) do |f| %>
-  <legned>New Message</legned>
+<%= form_for([project, Message.new]) do |f| %>
+  <legend>New Message</legend>
+
   <%= f.text_area :body, cols: 30, rows: 5 %>
+
   <div>
     <h5>Notify the following members:</h5>
-    <ul>
-      <% @project.accesses.each do |access| %>
+     <ul>
+      <% project.accesses.each do |access| %>
         <li>
           <%= check_box_tag 'message[subscriber_ids][]', access.user.id %>
           <%= access.user.name %>
@@ -12,6 +14,7 @@
       <% end %>
     </ul>
   </div>
+
   <div>
     <%= f.submit :create %>
   </div>

@@ -1,0 +1,54 @@
+// Place all the styles related to the progress controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.progress {
+  a {
+    color: #1c5c76;
+  }
+  li {
+    padding: 12px;
+    font-weight: bold;
+  }
+
+  .content {
+    font-weight: 300;
+
+    .created-at {
+      font-style: italic;
+      font-size: 0.8em;
+    }
+  }
+
+  li {
+
+    list-style-type: none;
+
+    .avatar {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      line-height: 100px;
+      background: #76AC80;
+      float: left;
+      margin-right: 10px;
+
+      .content {
+        float:left;
+        width:100%;
+        padding-top:50%;
+        line-height:1em;
+        margin-top:-0.5em;
+        text-align:center;
+        color:white;
+      }
+    }
+  }
+}
+
+.loading {
+  display: none;
+  padding: 12px;
+  font-style: italic;
+}

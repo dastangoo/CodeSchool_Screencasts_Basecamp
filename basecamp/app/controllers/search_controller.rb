@@ -1,15 +1,18 @@
-# Search Controller
 class SearchController < ApplicationController
   def index
+
     if jump = find_jump_target
       redirect_to jump
     else
-      @result = Search.for(params[:keyword])
+      @results = Search.for(params[:keyword])
     end
+
   end
-  
-  privae 
+
+  private
+
     def find_jump_target
-      Project.find_by(title: params[:keyword]) || User.find_by(name, params[:keyword])
+      Project.find_by(title: params[:keyword]) ||
+        User.find_by(name: params[:keyword])
     end
 end

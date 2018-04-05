@@ -1,0 +1,36 @@
+<h1>Progress</h1>
+
+<ul class='progress'>
+  <%= render @actions %>
+</ul>
+
+<div class='loading'>
+  Loading progress...
+</div>
+
+<script>
+  $(function(){
+    updateProjectSections();
+  })
+
+  function updateProjectSections(offsetElement){
+    var previousProjectTitle = null;
+    var actionsLi = null;
+
+    if(offsetElement){
+      actionsLi = offsetElement.nextAll()
+    }else{
+      actionsLi = $('.progress li');
+    }
+
+    for(var i=0; i < actionsLi.length; i++){
+      currentAction = $(actionsLi[i]);
+      currentProjectTitle = currentAction.data('project-title');
+
+      if(previousProjectTitle === null || (previousProjectTitle !== null && previousProjectTitle !== currentProjectTitle)){
+        currentAction.prepend('<h3>' + currentProjectTitle + '</h3>');
+      }
+      previousProjectTitle = currentProjectTitle;
+    }
+  }
+</script>

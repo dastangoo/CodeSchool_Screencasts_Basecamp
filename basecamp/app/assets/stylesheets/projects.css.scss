@@ -1,0 +1,99 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  background: #f5efe6;
+}
+
+
+body {
+  padding: 20px;
+  font-family: "ProximaNova","Helvetica Neue",helvetica,arial,sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+article {
+  h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+
+  background: white;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+
+
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; /* future proofing */
+
+  .last-updated {
+    font-size: 0.8em;
+    color: #aa9c84;
+  }
+
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.accesses {
+  margin-top: 90px;
+
+  .avatar {
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    line-height: 100px;
+    background: #76AC80;
+
+    .content {
+      float:left;
+      width:100%;
+      padding-top:50%;
+      line-height:1em;
+      margin-top:-0.5em;
+      text-align:center;
+      color:white;
+    }
+  }
+}
+
+div.row {
+  margin-bottom: 40px;
+
+  .search-box {
+    //position: relative;
+    //float: right;
+    //margin-top: -42px;
+
+
+    input[type=text] {
+      background: #fff url(https://d3dma7a8zw52bz.cloudfront.net/assets/icons/icon_search-7ecce355488cdee261b995a5792c687f.png) no-repeat 10px center;
+      padding: 8px 10px 8px 28px;
+      color: #444;
+      font-size: 15px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.3);
+      border: 1px solid #CCC;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; /* future proofing */
+    }
+  }
+}
+
+.new_message ul {
+  list-style-type: none;
+}
+
+.participants {
+  margin-top: -20px;
+  font-weight: 300;
+  text-line-through-mode: inherit;
+  font-style: italic;
+}
